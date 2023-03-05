@@ -1,0 +1,38 @@
+.navbar-contenedor{
+  background-color: white;
+  color: gray;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 20px ;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 400;
+  box-shadow: 0 0 0 5px rgb(0 0 0/ 9%);
+  text-decoration: none;
+}
+
+.logo-restaurante{
+  height: 100%;
+  width: 90px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around; 
+}
+
+li {
+  margin-right: 200px; /* Añade un margen a la derecha para separar los elementos */
+}
+
+li:hover{
+  color: green;
+  cursor: pointer;
+}
+

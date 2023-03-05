@@ -1,0 +1,12 @@
+form{
+    border: 2px solid green;
+    background-color: aliceblue;
+    width: 50%;
+    height: 400px;
+}
+
+label{
+    display: flex;
+    align-items: center;
+    
+}
