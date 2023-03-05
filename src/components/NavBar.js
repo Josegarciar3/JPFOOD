@@ -16,7 +16,7 @@ function NavBar(){
           <li>
           <img
             className='logo-restaurante'
-            src={require('../images/logo.jpg')}
+            src={require('../images/logo2.jpg')}
             alt='logo'/>
           </li>
           <li>

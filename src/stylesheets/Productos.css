@@ -24,7 +24,7 @@
 header{
     width: 100%;
     display: flex;
-    background-color: red;
+    
 }
 
 .text-head{
@@ -40,7 +40,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: dodgerblue;
+    
     border-radius: 10px;
     margin: 50px 30px;
 }

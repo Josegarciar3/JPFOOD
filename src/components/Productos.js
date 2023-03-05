@@ -25,9 +25,14 @@ function Productos(props){
           alt='postre' /> 
       </div>    
       <div className='text-head'>
-        <h4> Hola </h4>
+        <h4> About us. </h4>
           <p>
-            Restaurante familiar 
+          La pasta al dente y pizza Nápoles representa dos de los platillos más queridos de Italia. 
+          Vive una experiencia única en JP FOOD, un lugar para compartir con las personas que amas. 
+          Nos destacamos por entregarte un pedacito de Italia 🇮🇹. <br/>
+          Nuestros platos tradicionales pero innovadores son creados por 
+          nuestro querido Chef Picasso nacido en Nápoles.
+
           </p>
       </div>
     </header>  

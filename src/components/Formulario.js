@@ -1,39 +1,79 @@
 import React, { useState } from 'react';
 import '../stylesheets/Formulario.css'
+import { Form, Button } from 'react-bootstrap';
 
 function ReservationForm() {
   const [name, setName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
-  const [guests, setGuests] = useState('');
+  const [partySize, setPartySize] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Aquí podrías enviar la información a un servidor o hacer algo con ella.
-    console.log(`Reserva realizada por ${name} para ${guests} personas el ${date} a las ${time}.`);
+    // Aquí es donde enviaríamos los datos de reserva a una API o algún otro destino de almacenamiento
+    console.log('Nombre:', name);
+    console.log('Número de teléfono:', phoneNumber);
+    console.log('Fecha:', date);
+    console.log('Hora:', time);
+    console.log('Tamaño del grupo:', partySize);
   };
 
   return (
-    <form className='formulario' onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input type="text" placeholder= 'Name' value={name} onChange={(event) => setName(event.target.value)} />
-      </label>
-      <label>
-        Fecha:
-        <input type="date" placeholder= 'Date' value={date} onChange={(event) => setDate(event.target.value)} />
-      </label>
-      <label>
-        Hora:
-        <input type="time" placeholder= 'Time' value={time} onChange={(event) => setTime(event.target.value)} />
-      </label>
-      <label>
-        Invitados:
-        <input type="number" placeholder= 'Guests' value={guests} onChange={(event) => setGuests(event.target.value)} />
-      </label>
-      <button type="submit">Reservar</button>
-    </form>
-  );
+    <div className="formu d-inline-block justify-content-center align-items-center  ">   
+        <Form  onSubmit={handleSubmit}>
+          <Form.Group controlId="formName">
+            <Form.Label>Nombre:</Form.Label>
+            <Form.Control
+              type="text"
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="formPhoneNumber">
+            <Form.Label>Número de teléfono:</Form.Label>
+            <Form.Control
+              type="tel"
+              value={phoneNumber}
+              onChange={(event) => setPhoneNumber(event.target.value)}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="formDate">
+            <Form.Label>Fecha:</Form.Label>
+            <Form.Control
+              type="date"
+              value={date}
+              onChange={(event) => setDate(event.target.value)}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="formTime">
+            <Form.Label>Hora:</Form.Label>
+            <Form.Control
+              type="time"
+              value={time}
+              onChange={(event) => setTime(event.target.value)}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="formPartySize">
+            <Form.Label>Tamaño del grupo:</Form.Label>
+            <Form.Control
+              type="number"
+              value={partySize}
+              onChange={(event) => setPartySize(event.target.value)}
+            />
+          </Form.Group>
+
+          <Button className="envio-boton" variant="primary" type="submit">
+            Enviar
+          </Button>
+        </Form>
+    </div>     
+  );    
 }
 
 export default ReservationForm;
+
